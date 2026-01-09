@@ -1,263 +1,200 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह</title>
 
-  <title>श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  <!-- SEO -->
-  <meta name="description" content="श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह – शुद्ध, नैसर्गिक व रासायनिक मुक्त ऑर्गॅनिक मसाले.">
-  <meta name="keywords" content="Organic Spices, Annapurna Organics, Marathi Masale, Sangli">
-  <meta name="author" content="Shree Annapurna Organics Udyog Samuh">
+*{box-sizing:border-box}
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0f2f1f;
+    color:#fff;
+}
 
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      background:#f4fff4;
-      color:#2b2b2b
-    }
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+        linear-gradient(135deg,rgba(16,74,45,.95),rgba(10,40,28,.95)),
+        url("assets/products/halad.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
 
-    /* ===== PREMIUM BANNER ===== */
-    header{
-      background:
-        linear-gradient(135deg,rgba(27,94,32,.92),rgba(46,125,50,.88)),
-        url('assets/banner.jpg');
-      background-size:cover;
-      background-position:center;
-      color:#fff;
-      text-align:center;
-      padding:120px 20px;
-    }
+/* GLASS CARD */
+.hero-card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:50px 40px;
+    text-align:center;
+    max-width:850px;
+    box-shadow:0 40px 80px rgba(0,0,0,0.4);
+    animation:fadeUp 1.2s ease;
+}
 
-    header img{
-      width:150px;
-      margin-bottom:20px;
-      background:#fff;
-      padding:12px;
-      border-radius:50%;
-      box-shadow:0 12px 30px rgba(0,0,0,.35);
-    }
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:translateY(0)}
+}
 
-    header h1{
-      font-size:42px;
-      font-weight:600;
-      letter-spacing:1px;
-      margin:15px 0;
-    }
+/* LOGO */
+.logo{
+    width:140px;
+    height:140px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
 
-    header p{
-      font-size:19px;
-      opacity:.95;
-      margin-bottom:35px;
-    }
+.logo img{
+    width:90px;
+}
 
-    nav{
-      background:#1b5e20;
-      display:flex;
-      justify-content:center;
-      gap:22px;
-      padding:14px;
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
+/* TEXT */
+.hero h1{
+    font-size:42px;
+    font-weight:600;
+    margin-bottom:15px;
+}
 
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:500;
-    }
+.hero p{
+    font-size:18px;
+    opacity:.9;
+    margin-bottom:35px;
+}
 
-    nav a:hover{color:#c8e6c9}
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#6fdc8c,#2e7d32);
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+    transition:.3s;
+}
 
-    section{
-      max-width:1150px;
-      margin:auto;
-      padding:60px 20px;
-    }
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 45px rgba(0,0,0,.5);
+}
 
-    h2{
-      text-align:center;
-      color:#2e7d32;
-      font-size:32px;
-      margin-bottom:35px;
-    }
+/* PRODUCTS */
+.products{
+    background:#f5f7f4;
+    color:#333;
+    padding:80px 20px;
+}
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
+.products h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:50px;
+    color:#1b5e20;
+}
 
-    .card{
-      background:#fff;
-      border-radius:16px;
-      box-shadow:0 8px 22px rgba(0,0,0,.08);
-      padding:22px;
-      text-align:center;
-    }
+.grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:30px;
+}
 
-    .card img{
-      width:100%;
-      border-radius:12px;
-    }
+.card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    transition:.35s;
+}
 
-    .badge{
-      display:inline-block;
-      margin-top:10px;
-      padding:6px 14px;
-      border-radius:20px;
-      font-size:12px;
-      color:#fff;
-    }
+.card:hover{
+    transform:translateY(-10px);
+}
 
-    .premium{background:#2e7d32}
-    .regular{background:#607d8b}
+.card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
 
-    .highlight{
-      background:#e8f5e9;
-      border-left:6px solid #2e7d32;
-      padding:22px;
-      border-radius:12px;
-      font-size:16px;
-    }
+.card h3{
+    padding:18px;
+    margin:0;
+    font-size:18px;
+}
 
-    /* ===== PREMIUM BUTTON ===== */
-    .btn{
-      display:inline-block;
-      background:linear-gradient(135deg,#66bb6a,#2e7d32);
-      color:#fff;
-      padding:14px 34px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:500;
-      box-shadow:0 8px 20px rgba(0,0,0,.35);
-      transition:all .3s ease;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 28px rgba(0,0,0,.45);
-    }
-
-    footer{
-      background:#1b5e20;
-      color:#fff;
-      text-align:center;
-      padding:22px;
-    }
-
-    @media(max-width:600px){
-      header h1{font-size:28px}
-    }
-  </style>
+/* FOOTER */
+footer{
+    background:#0b2619;
+    padding:25px;
+    text-align:center;
+    font-size:14px;
+    opacity:.85;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <img src="assets/logo.png" alt="श्री अन्नपूर्णा ऑर्गॅनिक लोगो">
-  <h1>श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह</h1>
-  <p>शुद्ध • नैसर्गिक • विश्वासार्ह Organic उत्पादने</p>
-  <a class="btn" href="https://wa.me/919876543210" target="_blank">
-    WhatsApp वर संपर्क करा
-  </a>
-</header>
+<section class="hero" id="about">
+    <div class="hero-card">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
 
-<nav>
-  <a href="#about">आमच्याबद्दल</a>
-  <a href="#products">उत्पादने</a>
-  <a href="#organic">Organic का?</a>
-  <a href="#contact">संपर्क</a>
-</nav>
+        <h1>श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह</h1>
+        <p>शुद्ध • नैसर्गिक • विश्वासार्ह Organic उत्पादने</p>
 
-<section id="about">
-  <h2>आमच्याबद्दल</h2>
-  <div class="cards">
-    <div class="card">उच्च दर्जाची शुद्ध ऑर्गॅनिक मसाले</div>
-    <div class="card">रासायनिक मुक्त व सुरक्षित प्रक्रिया</div>
-    <div class="card">गुणवत्ता व विश्वास हीच आमची ओळख</div>
-  </div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+            WhatsApp वर संपर्क करा
+        </a>
+    </div>
 </section>
 
-<section id="products">
-  <h2>आमची उत्पादने</h2>
-  <div class="cards">
+<section class="products" id="products">
+    <h2>आमची उत्पादने</h2>
 
-    <div class="card">
-      <img src="assets/products/halad.jpg">
-      <h3>हळद पावडर</h3>
-      <span class="badge premium">Premium</span>
+    <div class="grid">
+        <div class="card">
+            <img src="assets/products/dhane.jpg">
+            <h3>धणे</h3>
+        </div>
+        <div class="card">
+            <img src="assets/products/halad.jpg">
+            <h3>हळद</h3>
+        </div>
+        <div class="card">
+            <img src="assets/products/jire.jpg">
+            <h3>जिरे</h3>
+        </div>
+        <div class="card">
+            <img src="assets/products/mirchi.jpg">
+            <h3>मिरची</h3>
+        </div>
     </div>
-
-    <div class="card">
-      <img src="assets/products/mirchi.jpg">
-      <h3>मिरची पावडर</h3>
-      <span class="badge regular">Regular</span>
-      <span class="badge premium">Premium</span>
-    </div>
-
-    <div class="card">
-      <img src="assets/products/dhane.jpg">
-      <h3>धणे पावडर</h3>
-      <span class="badge regular">Regular</span>
-    </div>
-
-    <div class="card">
-      <img src="assets/products/jire.jpg">
-      <h3>जिरे</h3>
-      <span class="badge premium">Premium</span>
-    </div>
-
-  </div>
-</section>
-
-<section id="organic">
-  <h2>Organic का निवडावे?</h2>
-  <div class="highlight">
-    Organic उत्पादने नैसर्गिक पद्धतीने तयार केली जातात.
-    कोणतेही घातक रसायन न वापरता चव व पोषणमूल्य जपले जाते.
-  </div>
-</section>
-
-<section id="contact">
-  <h2>संपर्क साधा</h2>
-  <div class="cards">
-    <div class="card"><strong>📞 Phone</strong><br>9876543210</div>
-    <div class="card"><strong>💬 WhatsApp</strong><br>9876543210</div>
-    <div class="card"><strong>📍 Address</strong><br>Sangli, Maharashtra</div>
-  </div>
-
-  <br>
-
-  <iframe
-    src="https://www.google.com/maps?q=Sangli%20Maharashtra&output=embed"
-    width="100%" height="300"
-    style="border:0;border-radius:16px"
-    loading="lazy">
-  </iframe>
-
-  <br><br>
-
-  <center>
-    <a class="btn" href="https://wa.me/919876543210" target="_blank">
-      WhatsApp वर संपर्क करा
-    </a>
-  </center>
 </section>
 
 <footer>
-  © <span id="year"></span> श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह | All Rights Reserved
+    © 2026 श्री अन्नपूर्णा ऑर्गॅनिक उद्योग समूह
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
